@@ -22,4 +22,4 @@ for person in persons:
     personalities = person.split()
     person_name = personalities[-1].capitalize()
     profession = (' '.join(personalities[0:-1:1]))
-    print(f'Привет,{profession} {person_name}!')
+    print(f'Привет, {profession} {person_name}!')
