@@ -1,23 +1,12 @@
-# 3. Написать функцию thesaurus(), принимающую в качестве аргументов имена сотрудников и возвращающую словарь, 
-# в котором ключи — первые буквы имен, а значения — списки, содержащие имена, начинающиеся с соответствующей буквы.
-# Условие задачи
-# Техническое задание
-# 
-# Количество передаваемых имен в функцию может быть любым. 
-# Считаем, что переданы будут только корректные строки. 
-# Обратите внимание, что функция принимает произвольное количество параметров.
-# Вернуть словарь с ключами, отсортированными в алфавитном порядке.
-# Выполнить вызов функции для списка имен и вывести на экран словарь.
-# Вы можете вывести на экран «красиво» - как в примере на каждой строке одна буква и список, но это не обязательно.
-
 def thesaurus(*args):
     names_dict = {}
     for i in args:
         first_letter = i[0]
         if first_letter in names_dict:
-            element = names_dict.get(first_letter)
-            element.append(i)
-            names_dict[first_letter] = element
+            names_dict[first_letter].append(i)
+            # element = names_dict.get(first_letter)
+            # element.append(i)
+            # names_dict[first_letter] = element
         else:
             names_dict[first_letter] = [i]
     return dict(sorted(names_dict.items()))
