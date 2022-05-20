@@ -5,7 +5,6 @@ path_file = pathlib.Path('..', 'Files', 'bakery.cvs')
 
 def show_sales(value=None):
     with open(path_file, mode='rt', encoding='utf-8') as f:
-        if value:
             if len(value) == 1:
                 content = f.read()
                 return content
@@ -25,6 +24,6 @@ def show_sales(value=None):
                 return 'Параметры можно вводить только в числовом формате'
             else:
                 return 'Введено слишком много параметров'
-
+        
 
 print(show_sales(argv))
