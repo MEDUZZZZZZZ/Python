@@ -1,6 +1,6 @@
 from pathlib import Path
 from os import walk, stat
-data_path = Path('.','task_7_4', 'some_data')
+data_path = Path('.','Files', 'some_data')
 dict_of_files = {10**power: 0 for power in range(2,6)}
 for  root, dirs, files in walk(data_path):
     for file in files:
